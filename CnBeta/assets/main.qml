@@ -62,8 +62,8 @@ NavigationPane {
             }
         }
         function errormsg(msg) {
-            sst.body = msg;
-            sst.show();
+            ssd.err = msg;
+            ssd.show();
         }
         attachedObjects: [
             SystemToast {
@@ -71,6 +71,29 @@ NavigationPane {
             },
             Net {
                 id: net
+            },
+            SystemDialog {
+                id: ssd
+                property string err
+                title: qsTr("ERROR")
+                body: qsTr("Error fetching data, Server response is [%1]").arg(err)
+                includeRememberMe: false
+                confirmButton.label: "Reload"
+                cancelButton.label: "Cancel"
+                customButton.label: "Exit App"
+                customButton.enabled: true
+                confirmButton.enabled: true
+                cancelButton.enabled: true
+                onFinished: {
+                    switch (value) {
+                        case SystemUiResult.ConfirmButtonSelection:
+                            lv_main.resetData()
+                            break;
+                        case SystemUiResult.CustomButtonSelection:
+                            Application.requestExit()
+                            break;
+                    }
+                }
             }
         ]
         ListView {
@@ -83,6 +106,7 @@ NavigationPane {
 
             function resetData() {
                 adm.clear();
+                pageroot.loading = false;
                 page = 1;
                 load()
             }
