@@ -76,11 +76,11 @@ NavigationPane {
                 id: ssd
                 property string err
                 title: qsTr("ERROR")
-                body: qsTr("Error fetching data, Server response is [%1]").arg(err)
+                body: qsTr("Error fetching data, Server response is [%1], please check your internet connection.").arg(err)
                 includeRememberMe: false
-                confirmButton.label: "Reload"
-                cancelButton.label: "Cancel"
-                customButton.label: "Exit App"
+                confirmButton.label: qsTr("Reload")
+                cancelButton.label: qsTr("Cancel")
+                customButton.label: qsTr("Exit App")
                 customButton.enabled: true
                 confirmButton.enabled: true
                 cancelButton.enabled: true

@@ -44,7 +44,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="53"/>
+        <location filename="../assets/about.qml" line="55"/>
+        <source>3.   No HTML Link.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/about.qml" line="60"/>
         <source>ALL CONTENT RIGHTS RESERVED BY CNBETA.COM</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54,6 +59,31 @@
     <message>
         <location filename="../assets/main.qml" line="43"/>
         <source>CnBeta for BlackBerry 10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="78"/>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="79"/>
+        <source>Error fetching data, Server response is [%1], please check your internet connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="81"/>
+        <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="82"/>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="83"/>
+        <source>Exit App</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

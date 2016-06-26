@@ -50,6 +50,13 @@ Page {
             }
             Label {
                 multiline: true
+                horizontalAlignment: HorizontalAlignment.Left
+                textStyle.fontSize: FontSize.Small
+                text: qsTr("3.   No HTML Link.")
+                textStyle.fontWeight: FontWeight.W100
+            }
+            Label {
+                multiline: true
                 text: qsTr("ALL CONTENT RIGHTS RESERVED BY CNBETA.COM")
                 horizontalAlignment: HorizontalAlignment.Center
                 textStyle.fontSize: FontSize.XXSmall

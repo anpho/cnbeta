@@ -26,7 +26,7 @@
     <message>
         <location filename="../assets/about.qml" line="29"/>
         <source>Merrick Zhang ( anphorea@gmail.com )</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../assets/about.qml" line="35"/>
@@ -44,7 +44,12 @@
         <translation>2.  页面内容是自动分析取得，可能会出错。</translation>
     </message>
     <message>
-        <location filename="../assets/about.qml" line="53"/>
+        <location filename="../assets/about.qml" line="55"/>
+        <source>3.   No HTML Link.</source>
+        <translation>3.  内容中不包括超链接。</translation>
+    </message>
+    <message>
+        <location filename="../assets/about.qml" line="60"/>
         <source>ALL CONTENT RIGHTS RESERVED BY CNBETA.COM</source>
         <translation>文章内容版权由cnbeta.com所有</translation>
     </message>
@@ -55,6 +60,35 @@
         <location filename="../assets/main.qml" line="43"/>
         <source>CnBeta for BlackBerry 10</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="78"/>
+        <source>ERROR</source>
+        <translation>网络发生错误</translation>
+    </message>
+    <message>
+        <source>Error fetching data, Server response is [%1]</source>
+        <translation type="obsolete">获取数据失败，服务器返回了 [%1]，请检查网络连接</translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="79"/>
+        <source>Error fetching data, Server response is [%1], please check your internet connection.</source>
+        <translation>获取数据失败，服务器返回了 [%1]，请检查网络连接。</translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="81"/>
+        <source>Reload</source>
+        <translation>重试</translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="82"/>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="83"/>
+        <source>Exit App</source>
+        <translation>退出</translation>
     </message>
 </context>
 <context>
