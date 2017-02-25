@@ -72,9 +72,7 @@ void ApplicationUI::get(const QString endpoint)
             QString(
                     "Mozilla/5.0 (Linux; U; Android 2.3; en-us; SAMSUNG-SGH-I717 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1").toLatin1());
     req.setRawHeader(QString("Referer").toLatin1(), QString("http://www.cnbeta.com").toLatin1());
-    req.setRawHeader(QString("Accept-Language").toLatin1(),
-            QString("zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4").toLatin1());
-
+    req.setRawHeader(QString("Accept-Language").toLatin1(), QString("zh-CN,zh;q=0.8").toLatin1());
 //    QHttpMultiPart *multipart = new QHttpMultiPart(QHttpMultiPart::FormDataType);
 //    QHttpPart contentPart;
 //    contentPart.setHeader(QNetworkRequest::ContentDispositionHeader,
@@ -94,7 +92,7 @@ void ApplicationUI::get(const QString endpoint)
 
 void ApplicationUI::onArticleCreated()
 {
-    QString data = (QString) reply->readAll();
+    QString data = QString::fromLocal8Bit(reply->readAll());
     qDebug() << data;
     if ((data.indexOf("article") > 0)) {
         emit returned(true, data);

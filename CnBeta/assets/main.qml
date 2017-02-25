@@ -102,7 +102,7 @@ NavigationPane {
                 id: adm
             }
             property int page: 1
-            property string endpoint: "http://www.cnbeta.com/more"
+            property string endpoint: "http://www.cnbeta.com/home/more"
 
             function resetData() {
                 adm.clear();
@@ -132,7 +132,7 @@ NavigationPane {
             }
             onTriggered: {
                 var selected = adm.data(indexPath);
-                var urltoopen = "http://www.cnbeta.com" + selected.url_show;
+                var urltoopen = selected.url_show;
                 var wbv = Qt.createComponent("viewer.qml").createObject(navroot);
                 wbv.u = urltoopen;
                 wbv.source_txt = selected.source
