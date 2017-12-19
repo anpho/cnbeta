@@ -74,12 +74,14 @@ Page {
                         _app.viewimage(wiv.getCachedPath())
                     }
                 }
+                imageSource: "asset:///image_placeholder.png"
             }
         },
         QtObject {
             id: imp
             function process(txt) {
                 holder.removeAll();
+                //TODO 图片显示不出来
 
                 var removeP = txt.replace(/<p[^>]*?>/igm, "[param]");
                 var removeIMG = removeP.replace(/<img.*?src.*?[\'\"]([^\'|^\"]*?)[\'|\"][^>]*?>/igm, function($0, $1, $2) {

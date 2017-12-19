@@ -162,7 +162,7 @@
 <context>
     <name>viewer</name>
     <message>
-        <location filename="../assets/viewer.qml" line="149"/>
+        <location filename="../assets/viewer.qml" line="151"/>
         <source>Loading ...</source>
         <translation>正在加载和分析 ...</translation>
     </message>

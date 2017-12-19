@@ -158,7 +158,7 @@
 <context>
     <name>viewer</name>
     <message>
-        <location filename="../assets/viewer.qml" line="149"/>
+        <location filename="../assets/viewer.qml" line="151"/>
         <source>Loading ...</source>
         <translation type="unfinished"></translation>
     </message>

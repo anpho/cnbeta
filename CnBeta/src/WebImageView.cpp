@@ -64,7 +64,7 @@ void WebImageView::setUrl(QUrl url)
     /*
      * deal with "asset://" and relative image path
      */
-    if (url.scheme() != "http") {
+    if (!((url.scheme() == "http") || (url.scheme() == "https")) ) {
         resetImage();
         setImageSource(url);
         return;
@@ -72,9 +72,6 @@ void WebImageView::setUrl(QUrl url)
 
     mUrl = url;
     mLoading = 0;
-
-    // Reset the image
-    resetImage();
 
     // Create request
     QNetworkRequest request;
@@ -126,6 +123,8 @@ void WebImageView::imageLoaded()
             return;
         } else {
             imageData = reply->readAll();
+            // Reset the image
+            resetImage();
             /*
              * since blackberry cascades's Image class doesn't provide any abilities to
              * extract data from it, I'd like to keep imageData in Memory for future use.
