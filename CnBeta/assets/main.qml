@@ -102,7 +102,7 @@ NavigationPane {
                 id: adm
             }
             property int page: 1
-            property string endpoint: "http://www.cnbeta.com/home/more"
+            property string endpoint: "https://www.cnbeta.com/home/more"
 
             function resetData() {
                 adm.clear();

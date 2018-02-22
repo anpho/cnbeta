@@ -132,7 +132,6 @@ config_pri_assets {
         $$quote($$BASEDIR/assets/about.qml) \
         $$quote($$BASEDIR/assets/cnbeta_451px_1193375_easyicon.png) \
         $$quote($$BASEDIR/assets/colors.xml) \
-        $$quote($$BASEDIR/assets/image_placeholder.png) \
         $$quote($$BASEDIR/assets/main.qml) \
         $$quote($$BASEDIR/assets/settings.qml) \
         $$quote($$BASEDIR/assets/viewer.qml)

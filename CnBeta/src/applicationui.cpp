@@ -15,7 +15,7 @@
  */
 
 #include "applicationui.hpp"
-
+#include <QSsl>
 #include <bb/cascades/Application>
 #include <bb/cascades/QmlDocument>
 #include <bb/cascades/AbstractPane>
@@ -68,6 +68,11 @@ void ApplicationUI::get(const QString endpoint)
 {
     QUrl edp(endpoint);
     QNetworkRequest req(edp);
+
+    QSslConfiguration config = QSslConfiguration::defaultConfiguration();
+    config.setProtocol(QSsl::SecureProtocols);
+    req.setSslConfiguration(config);
+
     req.setRawHeader(QString("User-Agent").toLatin1(),
             QString(
                     "Mozilla/5.0 (Linux; U; Android 2.3; en-us; SAMSUNG-SGH-I717 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1").toLatin1());
